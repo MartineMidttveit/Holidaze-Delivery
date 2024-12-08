@@ -23,7 +23,7 @@ const ProfileHeader = ({ userData, isManager }) => (
 
         <div className="flex justify-between w-full md:flex-row flex-col">
           <div className="flex flex-col items-center md:items-start pt-8 md:pt-16 lg:pt-8 lg:ml-60 xl:ml-80 2xl:ml-96 lg:pl-12">
-            <div className="flex items-center justify-center gap-2 pb-2 pt-10 md:pt-0 2xl:pt-2 w-full">
+            <div className="flex items-center justify-center md:justify-start gap-2 pb-2 pt-10 md:pt-0 2xl:pt-2 w-full">
               <h1 className="font-semibold xl:text-lg">{userData.name}</h1>
 
               <p className="text-secondary font-medium text-sm xl:text-base">
