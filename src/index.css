@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rounded-left {
+  border-radius: 5px 0 0 5px;
+}
+
+.rounded-right {
+  border-radius: 0 5px 5px 0;
+}
+
+.rounded-btm {
+  border-radius: 0rem 0rem 1.5rem 1.5rem;
+}
+
+.messenger-linear {
+  background: linear-gradient(
+    to top right,
+    #188aff 0%,
+    #b439e6 50%,
+    #ff6c65 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.remove-arrow {
+  -moz-appearance: textfield;
+}
