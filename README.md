@@ -52,10 +52,10 @@ To get the project up and running on your local machine, follow these steps:
 
 3. Start the development server:
    ```bash
-   npm run dev OR npm run build
+   npm run dev **OR** npm run build
 
 4. Open the project in your browser:
    ```bash
-   http://localhost:5173 OR http://localhost:5000
+   http://localhost:5173 **OR** http://localhost:5000
 
 
