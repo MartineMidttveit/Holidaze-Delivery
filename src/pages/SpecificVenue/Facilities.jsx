@@ -2,7 +2,7 @@ import icons from "../../utils/icons";
 
 export default function Facilities({ data }) {
   return (
-    <div className="flex flex-col xl:pb-6 2xl:pb-8">
+    <div className="flex flex-col pb-6 2xl:pb-8">
       <h2 className="font-bold md:text-lg pb-4">Facilities:</h2>
 
       <div className="flex flex-col gap-1 xl:gap-2 text-sm md:text-base">

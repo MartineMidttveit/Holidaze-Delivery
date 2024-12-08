@@ -34,6 +34,8 @@ export default async function handleLogin(data, navigate, toProfile = false) {
         : result.data.banner.url
 
     if (result.data) {
+
+
       storage.save('profile_name', result.data.name)
       storage.save('profile_avatar', avatar)
       storage.save('profile_banner', banner)

@@ -6,8 +6,8 @@ import usePutRequest from '../../../hooks/usePutRequest.js'
 import Header from './header.jsx'
 import Form from './form.jsx'
 
-const placeholderAvatar = '/placeholderAvatar.png'
-const placeholderBanner = '/placeholderBanner.png'
+const placeholderAvatar = 'placeholderAvatar.png'
+const placeholderBanner = 'placeholderBanner.png'
 
 function ActionButton({ text, onClick }) {
   return (
@@ -24,7 +24,6 @@ export default function EditProfile({ trigger }) {
   const [bannerLink, setBannerLink] = useState('')
   const [avatarPreview, setAvatarPreview] = useState('')
   const [bannerPreview, setBannerPreview] = useState('')
-
   const name = storage.get('profile_name')
   const avatar = storage.get('profile_avatar') || placeholderAvatar
   const banner = storage.get('profile_banner') || placeholderBanner
@@ -48,6 +47,7 @@ export default function EditProfile({ trigger }) {
   )
 
   const handleSubmit = () => {
+ 
     const data = {
       venueManager: enabled,
       banner: {

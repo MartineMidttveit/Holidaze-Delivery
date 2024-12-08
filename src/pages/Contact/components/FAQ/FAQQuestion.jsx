@@ -11,7 +11,7 @@ const FAQQuestion = ({
 }) => {
   return (
     <div className="bg-white rounded-lg p-8 lg:p-10 2xl:p-12">
-      <h3 className="text-xl font-bold pb-6">{title}</h3>
+      <h3 className="md:text-lg lg:text-xl font-bold pb-4 lg:pb-6">{title}</h3>
 
       <div className="flex flex-col gap-3">
         {faqQuestions.map((faq, index) => (

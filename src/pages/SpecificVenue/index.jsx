@@ -33,7 +33,7 @@ export default function SpecificVenue() {
   if (error) return <ErrorComponent />
 
   return (
-    <main className="bg-background text-primary font-poppins relative pb-12">
+    <main className="bg-background text-primary font-poppins relative pb-4 md:pb-8 lg:pb-12">
       <VenueMedia media={data.media} />
       <div className="px-[5%] lg:px-[7%] 2xl:px-[15%] lg:w-3/4 xl:w-full mx-auto">
         <VenueHeaderFacts data={data} isOwner={isOwner} />
