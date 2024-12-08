@@ -44,6 +44,6 @@ To get the project up and running on your local machine, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/holidaze.git ENDRE DENNE
+   git clone [https://github.com/your-username/holidaze.git ENDRE DENNE](https://github.com/MartineMidttveit/Holidaze-Delivery.git)
 
 2. 
