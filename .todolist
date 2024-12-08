@@ -1,0 +1,18 @@
+FRONTPAGE:  
+- Lazy loading? 
+
+REGISTER:
+- When clicking "Already have an account? Log in here", open login-modal. 
+
+GENERAL: 
+- Create an .env file.
+- Meta descriptions / titles. 
+- Check alt tags on images (make placeholders if not)
+- Remove console.logs
+
+CONTACT: 
+- Do not show the errors until the "Send message"-button is clicked. 
+
+NEW VENUE: 
+- Rating cant be higher than 5. 
+- When a new venue is created, redirect to that specific venue page. 
