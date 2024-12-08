@@ -34,6 +34,7 @@ import ClockIcon from "../components/SVG/ClockIcon";
 import GalleryIcon from "../components/SVG/GalleryIcon";
 import LongArrowLeft from "../components/SVG/LongArrowLeft";
 import StarIcon from "../components/SVG/StarIcon";
+import EyeSlashIcon from "../components/SVG/EyeSlashIcon";
 
 /**
  * Collection of SVG icon components used throughout the application
@@ -114,6 +115,7 @@ const icons = {
   galleryIcon: GalleryIcon,
   longArrowLeft: LongArrowLeft,
   starIcon: StarIcon,
+  eyeSlashIcon: EyeSlashIcon,
 };
 
-export default icons;
+export default icons

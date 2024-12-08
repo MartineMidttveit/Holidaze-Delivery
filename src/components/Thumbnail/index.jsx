@@ -4,7 +4,7 @@ import GuestFavorite from './GuestFavorite';
 import FigureDescription from './FigureDescription';
 import { Link } from 'react-router-dom';
 import Actions from './Actions';
-import { format, isAfter, parseISO } from 'date-fns';
+import { format, isAfter} from 'date-fns';
 
 /**
  * Thumbnail component that displays a venue card with various options and states

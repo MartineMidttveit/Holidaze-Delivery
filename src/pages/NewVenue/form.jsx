@@ -25,9 +25,9 @@ export default function Form({ venue }) {
   const { mutate: createVenue } = usePostRequest(
     'https://v2.api.noroff.dev/holidaze/venues',
     {
-      onSuccess: () => {
+      onSuccess: createdVenue => {
         reset()
-        navigate('/')
+        navigate(`/${createdVenue.data.id}`)
       },
     }
   )
@@ -65,8 +65,8 @@ export default function Form({ venue }) {
         zip: data.postalZIP || null,
         country: data.country || null,
         continent: data.continent || null,
-        lat: 0, 
-        lng: 0, 
+        lat: 0,
+        lng: 0,
       },
     }
 
@@ -106,14 +106,35 @@ export default function Form({ venue }) {
       <FacilitiesField register={register} venue={venue} />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full pb-4">
-        <InputLabel
-          name="rating"
-          type="number"
-          label="Rating:"
-          register={register}
-          defaultValue={venue?.rating}
-          required={true}
-        />
+        <div className="flex flex-col">
+          <label
+            htmlFor="rating"
+            className="text-sm 2xl:text-base font-medium text-secondary mb-2"
+          >
+            Rating:
+          </label>
+          <input
+            className="w-full px-3 py-2 border border-secondary rounded text-sm md:text-base h-12"
+            name="rating"
+            type="number"
+            defaultValue={venue?.rating}
+            required={true}
+            {...register('rating', {
+              min: {
+                value: 1,
+                message: 'Rating must be at least 1',
+              },
+              max: {
+                value: 5,
+                message: 'Rating cannot be greater than 5',
+              },
+              valueAsNumber: true,
+            })}
+          />
+          {errors?.rating && (
+            <p className="text-red-500 text-sm">{errors?.rating?.message}</p>
+          )}
+        </div>
         <InputLabel
           name="guests"
           type="number"
@@ -172,7 +193,9 @@ export default function Form({ venue }) {
       </div>
 
       <div className="flex gap-3 mt-3 mb-6">
-        <Button variant="third" onClick={() => navigate(-1)}>Cancel</Button>
+        <Button variant="third" onClick={() => navigate(-1)}>
+          Cancel
+        </Button>
         <Button type="submit" disabled={imageLinks.length === 0}>
           {venue ? 'Save changes' : 'Create venue'}
         </Button>

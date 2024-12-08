@@ -1,36 +1,42 @@
-import React, { useState } from "react";
-import Button from "../../components/Button";
+import {useState} from 'react'
+import Button from '../../components/Button'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleNameChange = (e) => {
-    const { value } = e.target;
+  const handleNameChange = e => {
+    const { value } = e.target
 
-    const filteredValue = value.replace(/[^a-zA-ZÆØÅæøå\s]/g, "");
+    const filteredValue = value.replace(/[^a-zA-ZÆØÅæøå\s]/g, '')
 
     setFormData({
       ...formData,
       name: filteredValue,
-    });
-  };
+    })
+  }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = e => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
       [name]: value,
-    });
-  };
+    })
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    if (formData.name.length < 3) {
+      setError(true)
+      return
+    }
 
     if (
       formData.name.length >= 3 &&
@@ -39,16 +45,16 @@ export default function ContactForm() {
       formData.message
     ) {
       setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setIsSubmitted(true);
-
-      setTimeout(() => setIsSubmitted(false), 3000);
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
+      setIsSubmitted(true)
+      setError(false)
+      setTimeout(() => setIsSubmitted(false), 3000)
     }
-  };
+  }
 
   return (
     <section className="bg-background w-full xl:w-1/2 flex justify-end px-[5%] lg:px-0 xl:pl-[5%] xl:pr-[7%] 2xl:pl-0 2xl:pr-[15%] py-12 md:py-16 lg:py-20 2xl:py-28">
@@ -81,8 +87,8 @@ export default function ContactForm() {
             {
               <p className="text-red-500 text-xs mt-1">
                 {formData.name.length < 3 &&
-                  formData.name.length > 0 &&
-                  "Name must be at least 3 characters."}
+                  error &&
+                  'Name must be at least 3 characters.'}
               </p>
             }
           </div>
@@ -142,15 +148,12 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <Button
-              type="submit"  
-              className="w-full"        
-            >
-              {isSubmitted ? "Message Sent!" : "Send message"}
+            <Button type="submit" className="w-full">
+              {isSubmitted ? 'Message Sent!' : 'Send message'}
             </Button>
           </div>
         </form>
       </div>
     </section>
-  );
+  )
 }

@@ -17,12 +17,12 @@
  */
 export default function InputLabel({
   name,
-  type = "text",
+  type,
   label,
   required = false,
   onChange,
   register,
-  defaultValue = "",
+  defaultValue = '',
   placeholder,
   value,
   onBlur,
@@ -31,12 +31,15 @@ export default function InputLabel({
 }) {
   return (
     <div className="flex flex-col w-full">
-      <label htmlFor={name} className="text-sm 2xl:text-base font-medium text-secondary">
+        <label
+          htmlFor={name}
+          className="text-sm 2xl:text-base font-medium text-secondary"
+        >
         {label}
       </label>
       <input
         defaultValue={defaultValue}
-        type={type}
+        type={type ?? 'text'}
         id={name}
         name={name}
         value={value}

@@ -24,7 +24,8 @@
     "react-router-dom": "^6.26.2",
     "react-star-ratings": "^2.3.0",
     "react-tailwindcss-datepicker": "^1.7.2",
-    "sonner": "^1.7.0"
+    "sonner": "^1.7.0",
+    "uuid": "^11.0.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
