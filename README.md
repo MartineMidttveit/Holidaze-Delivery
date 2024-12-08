@@ -46,4 +46,16 @@ To get the project up and running on your local machine, follow these steps:
    ```bash
    git clone git@github.com:MartineMidttveit/Holidaze-Delivery.git
 
-2. 
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Start the development server:
+   ```bash
+   npm run dev OR npm run build
+
+4. Open the project in your browser:
+   ```bash
+   http://localhost:5173 OR http://localhost:5000
+
+
