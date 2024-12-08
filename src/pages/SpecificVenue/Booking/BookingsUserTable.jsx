@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
 import {format} from 'date-fns'
 import icons from '../../../utils/icons'
 import validateImageUrl from '../../../utils/validateImageUrl'
