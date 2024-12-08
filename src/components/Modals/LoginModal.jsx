@@ -96,19 +96,27 @@ export default function LoginModal({
           <CheckboxLabel name="keepMeLoggedIn" label="Keep me logged in." />
         </div>
 
-        <Button type="submit" className="mt-1" disabled={isLoading}>
+        <Button
+          type="submit"
+          className="mt-1"
+          disabled={isLoading || email === '' || password === ''}
+        >
           {isLoading ? 'Logging in...' : 'Log in'}
         </Button>
       </form>
 
       <p>
         Not registered?{' '}
-        <Link
-          to="/register"
+        <button
+          type="button"
           className="underline text-contrast tracking-wide font-medium"
+          onClick={() => {
+            navigate('/register')
+            window.location.reload()
+          }}
         >
           Create new user.
-        </Link>
+        </button>
       </p>
     </Modal>
   )
