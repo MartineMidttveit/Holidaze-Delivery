@@ -45,9 +45,9 @@ export default function ImageLinksField({
         </button>
       </div>
 
-      <div className="grid gap-3 my-6 grid-cols-1 md:grid-cols-2">
+      <div className="grid gap-3 my-6 grid-cols-1">
         {imageLinks.length === 0 ? (
-          <figure className="bg-background h-80 w-full border-2 border-dotted border-secondary border-opacity-40 rounded-md text-secondary flex items-center justify-center">
+          <figure className="bg-background h-96 w-full border-2 border-dotted border-secondary border-opacity-40 rounded-md text-secondary flex items-center justify-center md:w-[70%] xl:w-[55%]">
             <icons.galleryIcon size={38} />
           </figure>
         ) : (
