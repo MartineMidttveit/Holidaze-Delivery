@@ -1,5 +1,5 @@
 import icons from '../../utils/icons'
-import DeleteVenue from "../Modals/DeleteVenue.jsx";
+import DeleteVenue from '../Modals/DeleteVenue'
 
 export default function Actions({ venue }) {
   const bookings = venue._count.bookings

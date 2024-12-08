@@ -1,6 +1,6 @@
 import {useFavorites} from '../../components/providers/Favorites';
 import icons from '../../utils/icons';
-import DeleteVenue from '../../components/Modals/DeleteVenue'
+import DeleteVenue from '../../components/Modals/DeleteVenue';
 import Button from '../../components/Button';
 import {Link} from 'react-router-dom';
 import HeartIcon from '../../components/SVG/HeartIcon';

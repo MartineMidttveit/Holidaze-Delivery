@@ -1,4 +1,4 @@
-import LoginModal from '../../../components/Modals/LoginModal'
+import LoginModal from '../../../components/Modals/loginModal'
 import { Link } from 'react-router-dom'
 
 export default function HamburgerBtns() {
