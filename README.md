@@ -58,4 +58,6 @@ To get the project up and running on your local machine, follow these steps:
    ```bash
    http://localhost:5173 OR http://localhost:5000
 
+## Links  
+💻 [Netlify](https://holidazeeee.netlify.app/?)
 
