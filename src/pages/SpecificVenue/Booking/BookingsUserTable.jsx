@@ -75,14 +75,14 @@ export default function BookingsUserTable({ data }) {
                       src={imageSrc}
                       alt={booking.customer.avatar.alt ?? ''}
                     />
-                    <Link to="/profile">
+   
                       <span
                         className="max-w-[10ch] block truncate"
                         title={booking.customer.name}
                       >
                         {booking.customer.name}
                       </span>
-                    </Link>
+
                   </div>
                 </th>
                 <td className="py-4">
