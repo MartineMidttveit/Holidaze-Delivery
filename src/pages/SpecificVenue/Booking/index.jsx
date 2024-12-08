@@ -9,7 +9,7 @@ import getNumberOfDays from '../../../utils/getNumberOfDays'
 import createBooking from '../../../api/requests/createBooking'
 import {useNavigate, useParams} from 'react-router-dom'
 import storage from '../../../api/helpers/storage'
-import LoginModal from '../../../components/modals/loginModal'
+import LoginModal from '../../../components/Modals/loginModal'
 import BookingsForOwner from './BookingsForOwner.jsx'
 
 export default function Booking({ data, isOwner }) {
